@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # simple script to test and record WiFi signal strength in CSV file
 # currently it works with your connected SSID
 
