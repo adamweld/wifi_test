@@ -2,23 +2,9 @@
 # simple script to test and record WiFi signal strength in CSV file
 # currently it works with your connected SSID
 
-function setup() {
-    # use ifconfig to find interface names
-    # confirm connection to network
-    # die if not connected
-    # interface="$ifconfig | grep XXX"
-    interface="wlxec086b1e55e3"
-    return 1
-}
-
 function measure() {
-    # use iwlist or iswonfig to return performance values
-	#iwlist wlxec086b1e55e3 scan | grep Signal
-    #strength="${sudo iwlist $interface scanning | grep Signal}"
-    #iw newer - iw wlan0 station dump | grep 'signal avg:' iwinfo - doesn't have link quality??
-    # iwconfig $interface | grep Link Quality
-
 	measurement="${iwconfig | grep Signal}"
+    echo measurement
     link="${measurement#*=}"
     signal="${link#*=}"
     link="${link%/*}"
@@ -37,10 +23,10 @@ function test() {
     		break
     	fi
     	measure
-    	echo "${entry},${link},${signal}" >> "$filename"
+    	echo "$entry,$link,$signal" >> "$filename"
+        echo "Link Quality = $link/70, Signal Strength = $signal dBm"
     done
 }
 
 # main
-setup
 test
