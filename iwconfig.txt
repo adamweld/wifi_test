@@ -1,0 +1,9 @@
+wlxec086b1e55e3  IEEE 802.11  ESSID:"Bermuda Triangle 2.4G"  
+          Mode:Managed  Frequency:2.452 GHz  Access Point: B4:75:0E:59:59:56   
+          Bit Rate=150 Mb/s   Tx-Power=20 dBm   
+          Retry short limit:7   RTS thr:off   Fragment thr:off
+          Power Management:off
+          Link Quality=70/70  Signal level=-39 dBm  
+          Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0
+          Tx excessive retries:0  Invalid misc:187   Missed beacon:0
+
