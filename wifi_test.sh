@@ -1,10 +1,9 @@
-#!/bin/bash
+#!/bin/sh
 # simple script to test and record WiFi signal strength in CSV file
 # currently it works with your connected SSID
 
 function measure() {
-	measurement="${iwconfig | grep Signal}"
-    echo measurement
+	measurement=$(iwconfig | grep Signal)
     link="${measurement#*=}"
     signal="${link#*=}"
     link="${link%/*}"
